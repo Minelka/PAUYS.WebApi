@@ -1,0 +1,6 @@
+@PAUYS.WebApi.API_HostAddress = http://localhost:5037
+
+GET {{PAUYS.WebApi.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

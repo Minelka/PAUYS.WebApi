@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PAUYS.ViewModel.Abstract
+{
+    public abstract class BaseViewModel<TKey> : IBaseViewModel<TKey>
+    {
+        private static int _rowNumber;
+
+        protected BaseViewModel(int rowNumber)
+        {
+            _rowNumber = rowNumber;
+        }
+
+        public virtual int RowNumber
+        {
+            get
+            {
+                _rowNumber = _rowNumber + 1;
+                return _rowNumber;
+            }
+
+            set
+            {
+                _rowNumber = value;
+            }
+        }
+
+        [Display(Name = "ID")]
+        public TKey Id { get; set; }
+
+        [Display(Name = "Durumu")]
+        public bool Status { get; set; }
+
+        [Display(Name = "Oluşturma Tarihi")]
+        public DateTime Created { get; set; } = DateTime.Now;
+
+        [Display(Name = "Güncelleme Tarihi")]
+        public DateTime? Updated { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        [Display(Name = "Silinme Tarihi")]
+        public DateTime? Deleted { get; set; }
+    }
+}
