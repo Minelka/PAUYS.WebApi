@@ -69,7 +69,7 @@
 
 Uygulama varsayılan olarak `https://localhost:5001` adresinde çalışacaktır.
 
-## API Uç Noktaları
+## API Endpoints
 
 ### Kimlik Doğrulama
 
@@ -100,14 +100,6 @@ PAUYS.WebApi
 └─ Configurations    # JWT ve diğer yapılandırmalar
 ```
 
-## Katkıda Bulunma
-
-1. Bu depoyu forklayın.
-2. Yeni bir dal oluşturun: `git checkout -b yeni-ozellik`
-3. Değişikliklerinizi yapın.
-4. Commit yapın: `git commit -m "Yeni özellik"`
-5. Dalınızı gönderin: `git push origin yeni-ozellik`
-6. Pull request oluşturun.
 
 ## Lisans
 
